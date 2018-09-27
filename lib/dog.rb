@@ -3,8 +3,9 @@ class Dog < ActiveRecord::Base
  attr_accessor :name, :breed
 
 
-def self.create(name:, breed:)
-  self.create(name, breed)
+def self.create
+  self.create
+  self.save
 end
 
 def self.save
